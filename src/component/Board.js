@@ -6,7 +6,7 @@ class Board extends React.Component{
   render(){
     const numbers = [];
     for(let i = 0; i<=9; i++){
-      numbers.push(<li className="col-sm-4 col-4" key={i}><div className="col-sm-10 text-center my-sm-2 my-2 py-sm-3 px-1 mx-auto num-btn" onClick={ () => this.props.numClick(i)}>{i}</div></li>)
+      numbers.push(<li className="col-sm-4 col-4" key={i}><div className="col-sm-10 text-center my-sm-2 my-2 py-sm-3 py-2 px-3 mx-auto num-btn" onClick={ () => this.props.numClick(i)}>{i}</div></li>)
     }
     return(
       <div className="col-sm-6 col-6 h-75 d-flex justify-content-around align-items-center board">
