@@ -5,7 +5,7 @@ class Modal extends React.Component{
 
     let judge = "";
     if(this.props.win === true){
-      judge = <div className={this.props.win === true ? "modal-wrap-win" : "modal-wrap"}>
+      judge = <div className={this.props.win === true ? "modal-wrap-on" : "modal-wrap"}>
         <div className="modal">
           <div>
             <span>You Win</span>
@@ -16,7 +16,7 @@ class Modal extends React.Component{
     }
 
     if(this.props.lose === true){
-      judge = <div className={this.props.lose === true ? "modal-wrap-win" : "modal-wrap"}>
+      judge = <div className={this.props.lose === true ? "modal-wrap-on" : "modal-wrap"}>
         <div className="modal">
           <div>
             <span>You Lose</span>
@@ -27,7 +27,7 @@ class Modal extends React.Component{
     }
 
     if(this.props.rule === true){
-      judge = <div className={this.props.rule === true ? "modal-wrap-win" : "modal-wrap"}>
+      judge = <div className={this.props.rule === true ? "modal-wrap-on" : "modal-wrap"}>
         <div className="modal rule">
           <div>
             <span>
