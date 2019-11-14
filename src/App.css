@@ -1,0 +1,164 @@
+
+main{
+  width:60%;
+  height:100vh;
+  margin: 0 auto;
+}
+
+button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 0;
+        appearance: none;
+
+}
+table{
+  user-select: none;
+}
+
+li{
+  list-style: none;
+}
+
+.container > .row{
+  height:100vh;
+}
+
+.num-btn{
+  background: #e0e0e0;
+  border-radius: 5px;
+  box-shadow: 0 4px #c0c0c0;
+  user-select: none;
+  cursor: pomodal
+}
+
+.num-btn:active{
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.show-num{
+  user-select: none;
+}
+
+.show-num,.board,.history{
+  background: #404040;
+}
+
+.modal-wrap{
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width:100%;
+  height:100%;
+}
+.modal-wrap-win{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  user-select: none;
+}
+
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:100px;
+  left:calc(50% - 250px);
+  width:500px;
+  height:250px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 12px,
+              rgba(0, 0, 0, 0.12) 0px 1px 8px,
+              rgba(0, 0, 0, 0.12) 0px 1px 6px,
+              rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+
+.modal div{
+  display: block;
+  text-align: center;
+}
+.modal.rule div{
+  display: block;
+  text-align: left;
+}
+.modal div span{
+  font-size: 48px;
+}
+
+.modal.rule{
+  height:400px;
+  padding:40px;
+}
+
+.modal.rule div span{
+  font-size: 16px;
+}
+
+.rule-btn,.time{
+  position: absolute;
+  top:5px;
+  width:100px;
+  height:100px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 12px,
+              rgba(0, 0, 0, 0.12) 0px 1px 8px,
+              rgba(0, 0, 0, 0.12) 0px 1px 6px,
+              rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+.rule-btn{
+  left:5px;
+}
+.time{
+  right:5px;
+}
+
+
+@media screen and (max-width: 575px) {
+  main{
+    display: flex;
+    align-items: center;
+  }
+  .container > .row{
+    height:70vh;
+  }
+  .num-btn{
+    font-size: 10px;
+  }
+  button{
+    font-size: 8px;
+  }
+  table{
+    font-size: 10px;
+  }
+  .modal{
+    width:300px;
+    height:150px;
+    left:calc(50% - 150px);
+  }
+  .modal div span{
+    font-size: 24px;
+  }
+  .modal.rule{
+    height:650px;
+  }
+  .rule-btn,.time{
+    width:70px;
+    height: 70px;
+    font-size: 16px;
+  }
+}
