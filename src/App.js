@@ -97,18 +97,18 @@ class App extends React.Component{
       if(res.eat === 3){
         this.setState({ win: true});
         clearTimeout(this.timeoutId);
+      }else if(history.length === 5 && res.eat === 3){
+        this.setState({ win: true});
+        clearTimeout(this.timeoutId);
+      }else if(history.length === 5){
+        this.setState({ lose: true});
+        clearTimeout(this.timeoutId);
       }
     })
     this.setState({
       history: history,
       my_numbers:[],
     });
-
-    if(this.state.history.length === 4 && this.state.win === false){
-      this.setState({ lose: true});
-      clearTimeout(this.timeoutId);
-    }
-
   }
 
   setNum(){
